@@ -27,6 +27,7 @@ export class ApiRequester {
     if (payload) {
       axiosConfig.data = payload;
     }
+    console.log(axiosConfig);
 
     const retryOptions = {
       retries: 10,

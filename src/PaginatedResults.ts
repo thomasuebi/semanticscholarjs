@@ -16,7 +16,7 @@ export class PaginatedResults<T> {
   private limit: number | null;
   private headers: Record<string, string> | null;
 
-  private data: any[] = [];
+  data: any[] = [];
   private total: number = 0;
   private offset: number;
   private next: number = 0;
@@ -40,8 +40,6 @@ export class PaginatedResults<T> {
     this.limit = limit || null;
     this.headers = headers || null;
     this.offset = 0 - (this.limit ?? 0);
-
-    this.getNextPage();
   }
 
   get Total(): number {
@@ -110,7 +108,6 @@ export class PaginatedResults<T> {
     );
 
     this.items = [...this.items, ...resultItems];
-
     return resultItems;
   }
 
@@ -131,7 +128,7 @@ export class PaginatedResults<T> {
     this.parameters += `&limit=${this.limit}`;
   }
 
-  public nextPage(): void {
-    this.getNextPage();
+  public async nextPage() {
+    return this.getNextPage();
   }
 }

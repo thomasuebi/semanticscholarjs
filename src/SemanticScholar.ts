@@ -230,7 +230,7 @@ export class SemanticScholar {
       query += `&fieldsOfStudy=${fields_of_study_str}`;
     }
 
-    const results = new PaginatedResults(
+    const paginatedResults = await new PaginatedResults(
       this._requester,
       Paper,
       url,
@@ -240,7 +240,7 @@ export class SemanticScholar {
       this.authHeader
     );
 
-    return results;
+    return paginatedResults;
   }
 
   // Add these methods to the SemanticScholar class definition
