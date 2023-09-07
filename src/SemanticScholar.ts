@@ -20,7 +20,7 @@ export class SemanticScholar {
   public api_url: string;
 
   constructor(
-    timeout: number = 3000,
+    timeout: number = 30000,
     api_key: string | null = null,
     api_url: string | null = null
   ) {
