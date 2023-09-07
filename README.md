@@ -55,10 +55,6 @@ console.log(results[5].title);
 Alan Turing’s “Computing Machinery and Intelligence”
 ```
 
-```
-A. Turing
-```
-
 
 ### 🌈 More Features
 
